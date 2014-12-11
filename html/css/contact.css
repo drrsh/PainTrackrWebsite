@@ -1,0 +1,78 @@
+body section.content section{ margin-top: 10px; }
+body section.content form{ margin-left: 20px; }
+body section.content form div.input_cont{ margin-bottom: 20px; font-size: 14px; }
+body section.content form div.input_cont span{ display: block; font-size: 14px; line-height: 22px; height: 22px; position: relative; z-index: 0; }
+body section.content form textarea,
+body section.content form input{
+	display: block;
+	width: 300px;
+	height: 24px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.1);
+	padding-left: 5px;
+}
+body section.content form textarea{
+	padding-top: 5px;
+	height: 200px;
+	max-height: 200px;
+	min-height: 200px;
+	max-width: 300px;
+	min-width: 300px;
+}
+body section.content form input[type=button]{
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 22px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+	border:0px;
+}
+body section.content form div.error{ color: #ea5511; }
+
+#okay{ margin-left: 0px; }
+#okay h1{ font-size: 22px; display:block; padding: 0px 400px 10px 0px; border-bottom: 1px solid #f1f1f1; margin-bottom: 10px; display:inline-block;}
+#okay p{ font-size:12px; }
+
+
+@media only screen and (min-width: 959px) and (max-width: 1080px) {	
+	body section.content form{ margin-left: 20px; }
+	body section.content form input{ width: 400px; }
+	body section.content form textarea{ max-width: 400px; min-width: 400px;}
+}
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body section.content form{ margin-left: 0px; }
+	body section.content form input{ width: 600px; }
+	body section.content form textarea{ max-width: 600px; min-width: 600px;}
+}
+
+
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {	
+	body section.content form{ margin-left: 0px; }
+	body section.content form input{ width: 400px; }
+	body section.content form textarea{ max-width: 400px; min-width: 400px;}
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (max-width: 480px) {
+	body section.content form{ margin-left: 0px; }
+	body section.content form input{ width: 200px; }
+	body section.content form textarea{ max-width: 200px; min-width: 200px;}
+}

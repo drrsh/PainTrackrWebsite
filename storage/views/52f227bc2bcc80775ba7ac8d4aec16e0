@@ -1,0 +1,24 @@
+<?php \Laravel\Section::start('scripts'); ?>
+
+<?php \Laravel\Section::stop(); ?>
+
+<?php \Laravel\Section::start('styles'); ?>
+<link  rel="stylesheet" type="text/css" href="/css/about.css">
+<?php \Laravel\Section::stop(); ?>
+
+<?php \Laravel\Section::start('content'); ?>
+<h1>About PainTrackr</h1>
+<section class="cf">
+	<article class="">
+	<p>PainTrackr is an open-source app that monitors physical pain. It logs pain based on severity and location and stores
+this data so that it can be easily transmitted.</p> 
+
+	<p>PainTrackr seeks to make logging pain more intuitive, while eliminating the hassle of inputting information via pen and paper. By providing a way for patients to easily enter data about their bodily pains, PainTrackr hopes to improve communication between patients and their healthcare providers.</p>
+
+	<p>PainTrackr was developed by <a href="http://www.goinvo.com">Involution Studios</a>, a full-service app design shop focusing on apps for web, mobile and 
+desktop devices. Founded in 2004, Involution has created apps for some of the best software companies in the world, 
+including Apple, Microsoft and Oracle, and has produced applications that are being used every day by over 150
+million users.</p>
+	</article>
+</section>
+<?php \Laravel\Section::stop(); ?>

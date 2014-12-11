@@ -1,0 +1,104 @@
+@section('scripts')
+<script type="text/javascript">
+(function(w){
+
+validate = function(value,type,element,values){
+	var $ele = $(element);
+	
+	if(value == ''){
+		$ele.parent().addClass("error");
+		return true;
+	}
+	
+	if(type == "email"){
+		var email = value.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
+		if(email == null){
+			$ele.parent().addClass("error");
+			return true;
+		}
+	}
+	$ele.parent().removeClass("error");
+	
+	
+	values[$ele.attr("name")] = value;
+	return false;
+}
+
+
+})(window);
+
+$(document).ready(function(){
+	var form   = $("#email_form"),
+		okay   = $("#okay"),
+		button = form.find("input[type=button]"),
+		fields = form.find(".field"),
+		values = { };
+		
+	okay.fadeOut(0);
+	
+	button.click(function(evt){
+		var error = false;
+		fields.each(function(){
+			var $this = $(this);
+			$this.find("input[type=text]").each(function(){
+				var type   = (this.dataset) ? this.dataset.type : $(this).attr("data-type"),
+					val    = $(this).val(),
+					status = validate(val,type,this,values);
+					
+				error = (status) ? status : error;
+			});
+			$this.find("textarea").each(function(){
+				var type   = (this.dataset) ? this.dataset.type : $(this).attr("data-type"),
+					val    = $(this).val(),
+					status = validate(val,type,this,values);
+					
+				error = (status) ? status : error;
+			});
+		});
+
+		if(error){
+			evt.preventDefault();
+			return false;
+		} else {
+			$.post("/contact/send",values,function(data){
+				form.fadeOut(300);
+				okay.fadeIn(300);
+			});
+		}
+	});
+});
+</script>
+@endsection
+
+@section('styles')
+<link  rel="stylesheet" type="text/css" href="/css/contact.css">
+@endsection
+
+@section('content')
+<h1>Contact</h1>
+<section class="cf pw">
+	
+	<article id="okay">
+		<h1>Thank you!</h1>
+		<p>We have received your message and will contact you within the next 4 hours</p>
+	</article>
+	
+	<form action="/contact/send" method="post" id="email_form" onsubmit="function(){return false;}">
+		<div class="input_cont field">
+			<span>Name*</span>
+			<input type="text" name="name" value="" data-type="string">
+		</div>
+		<div class="input_cont field">
+			<span>Email*</span>
+			<input type="text" name="email" value="" data-type="email">
+		</div>
+		<div class="input_cont field">
+			<span>Message*</span>
+			<textarea name="message" data-type="string"></textarea>
+		</div>
+		<div class="input_cont">
+			<input type="button" value="send" name="submitted" id="sender">
+		</div>
+	</form>
+</section>
+@endsection

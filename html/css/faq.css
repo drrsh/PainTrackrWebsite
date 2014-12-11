@@ -1,0 +1,24 @@
+dl{ margin-bottom: 50px; font-size: 14px; }
+dl dt{ margin: 0px 0px 10px 0px; font-weight: bold; }
+dl dd{ margin: 0px; }
+body section.content section article{
+	margin-right: 360px;
+}
+body section.content section nav{
+	position: absolute;
+	right: 50%;
+	width: 240px;
+	top:-95px;
+	margin-right: -480px;
+}
+body section.content section nav h2{ font-weight: normal; margin-bottom: 15px;}
+body section.content section nav ul{ list-style: none; }
+body section.content section nav li{ display: block; margin-bottom: 15px; font-size: 12px; }
+body section.content section nav a:visited,
+body section.content section nav a{ color: black; text-decoration: none; }
+body section.content section nav a:hover{ text-decoration: underline; }
+
+@media only screen and (max-width: 480px) {
+	body section.content section article{ margin-right: 0px; }	
+	body section.content section nav{ display: none; }
+}

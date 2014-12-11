@@ -1,0 +1,34 @@
+body section.content article.two div.half{ margin-right: 50px; width: 240px; }
+body section.content article.two div.half img{ width: 100%; display: block; }
+body section.content article.galleria span{ display: block; font-size: 12px; text-align: left; padding-left: 20px; }
+body section.content article.two{ margin-bottom: 50px; }
+body section.content article.double{ width: 530px; }
+body section.content article.double img{ width: 100%; }
+
+
+@media only screen and (min-width: 959px) and (max-width: 1080px) {	
+	body section.content article.double{ width: 530px; }
+}
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body section.content article.double{ width: 530px; }
+}
+
+
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {	
+	body section.content article.double{ width: 530px; }
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (max-width: 480px) {
+	body section.content article.double{ width: 340px; margin-left: -50px; }
+}

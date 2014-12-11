@@ -1,0 +1,28 @@
+<header>
+	<section class="middle cf pw">
+		<article class="f cf logo">
+			<a href="../" title=""><img src="/img/paintrackrlogo.png" alt=""></a>
+		</article>
+		<nav class="r cf">
+			<ul class="cf">
+				<li class="f"><a href="/home" title="" class="<?php if($title == "home"){ echo "on"; } ?>">Home</a></li>
+				<li class="f"><a href="/about" title="" class="<?php if($title == "about"){ echo "on"; } ?>">About</a></li>
+				<li class="f"><a href="https://github.com/goinvo/PainTrackr" title="" class="<?php if($title == "code"){ echo "on"; } ?>">Code</a></li>
+				<li class="f"><a href="/design" title="" class="<?php if($title == "design"){ echo "on"; } ?>">Design</a></li>
+				<li class="f"><a href="/faq" title="" class="<?php if($title == "faq"){ echo "on"; } ?>">FAQ</a></li>
+				<li class="f"><a href="/contact" title="" class="<?php if($title == "contact"){ echo "on"; } ?>">Contact</a></li>
+			</ul>
+		</nav>
+		<section class="dropdown cf" id="dd_nav">
+			<article class="current option">{{ ucfirst($title); }}</article>
+			<section class="list">
+				<article class="option" data-url="/home">Home</article>
+				<article class="option" data-url="/about">About</article>
+				<article class="option" data-url="https://github.com/goinvo/PainTrackr">Code</article>
+				<article class="option" data-url="/design">Design</article>
+				<article class="option" data-url="/faq">FAQ</article>
+				<article class="option" data-url="/contact">Contact</article>
+			</section>
+		</section>
+	</section>	
+</header>
